@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Github repositories analyzer</title>
+  <style>
+    .display-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/" method="POST">
+    <input type="text" name="input_text" placeholder="Enter text">
+    <button type="submit">Analyze</button>
+  </form>
+  
+  <div class="display-box">
+    {% if modified_text %}
+      {{ modified_text }}
+    {% endif %}
+  </div>
+</body>
+</html>
